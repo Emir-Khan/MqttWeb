@@ -1,0 +1,40 @@
+<div class="container justify-content-center d-flex">
+
+  <div class="card w-50">
+    <div class="card-header">
+      Message Publisher
+    </div>
+    <div class="card-body">
+      <h5 class="card-title text-center">Publish Message</h5>
+      <div class="mb-3">
+        <label for="message" class="form-label"><b>Message</b></label>
+        <form [formGroup]="messageForm">
+          <textarea class="form-control" formControlName="message" id="message" rows="3"></textarea>
+        </form>
+
+      </div>
+      <a (click)="publish()" class="btn btn-primary">Publish</a>
+    </div>
+    <div class="card-footer text-muted">
+      MQTT
+    </div>
+  </div>
+
+  <div class="card w-50">
+    <div class="card-header">
+      Light Turn On/Off
+    </div>
+    <div class="card-body row">
+      <h5 class="card-title text-center"><span [ngClass]="turnClassOn"> On</span>/<span
+          [ngClass]="turnClassOff">Off</span></h5>
+
+      <a (click)="turnOn()" class="btn btn-success col">Turn On</a>
+      <a (click)="turnOff()" class="btn btn-danger col">Turn Off</a>
+
+
+    </div>
+    <div class="card-footer text-muted">
+      MQTT
+    </div>
+  </div>
+</div>
